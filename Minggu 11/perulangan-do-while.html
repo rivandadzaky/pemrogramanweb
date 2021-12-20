@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Perulngan Do While</title>
+</head>
+<body>
+	<script>
+		var ulangi = confirm("Apkah Anda Ingin Melakukan Reload?");
+		var counter = 0;
+
+		do {
+			counter++;
+			ulangi = confirm("Apakah Anda Ingin Reload?");
+		} while(ulangi)
+
+		document.write("Perulangan Sudah Dilakukan "+ counter +" kali");
+	</script>
+</body>
+</html>

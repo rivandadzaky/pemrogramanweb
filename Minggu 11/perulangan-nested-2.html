@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Perulangan Nested</title>
+</head>
+<body>
+	<script>
+		var ulangi = confirm("Apakah Anda Ingin Mengulang?");
+		var counter = 0;
+
+		while (ulangi) {
+			counter++;
+			var tagar = "#".repeat(counter) + "<br>";
+			document.write(counter + "; " + tagar);
+			ulangi = confirm("Apakah Anda Ingin Mengulang?");
+		}
+	</script>
+</body>
+</html>
