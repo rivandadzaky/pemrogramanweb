@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Objek Javascript</title>
+
+	<script>
+		function person(firstName, lastName){
+			this.firstName = firstName;
+			this.lastName = lastName;
+			this.fullName = fucntion(){
+				return `${this.firstName} ${this.lastName}`
+			}
+			this.showName = function(){
+				document.write(this.fullName());
+			}
+		}
+		var person1 = new person("Agus", "Santoro"); 
+		var person2 = new person("Kode", "Code");
+
+		person1.showName();
+		document.write("<br>");
+		person2.showName();
+	</script>
+</head>
+<body>
+</body>
+</html>
