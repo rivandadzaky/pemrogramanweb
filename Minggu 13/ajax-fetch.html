@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewpoint" content="width=device-width, intial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Ajax Fetch</title>
+</head>
+<body>
+	<h1>Tutorial Ajax Dengan Fetch</h1>
+	<button onclick="loadcontent()">Load Content</button>
+	<div id="hasil"></div>
+
+	<script>
+		function loadContent(){
+			var url = "http://jsonplaceholder.typicode.com/posts/";
+			fetch(url).then(response => response.json())
+			    .then(function(data)){
+			    	var template = data.map(post => {
+			    		return `
+			    		<h3>${post.title}</h3>
+			    		<p>${post.body}</p>
+			    		<hr>
+			    		`;
+			    	});
+			    	document.getElementByID("hasil").innerHTML = template.join(`<br>`);
+			    }).catch(function(e){
+			    	alert("gagal mengambil data");
+			    });
+		}
+	</script>
+</body>
+</html>
